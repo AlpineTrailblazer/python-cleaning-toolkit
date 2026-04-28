@@ -21,33 +21,51 @@
 
 
 ## How to Use
- 1. *Install dependencies* 
-        pip install -r requirements.txt
- 2. *Import the pipeline*
-        from cleaning_toolkit.pipeline import clean_dataframe
- 3. *Load your dataset into a pandas DataFrame*
-        df = pd.read_csv('your_dataset.csv')
- 4. *Apply the cleaning pipeline*
-        cleaned_df = clean_dataframe(
-            df,
-            missing_strategies={
-                'age': 'mean',
-                'income': 'median',
-            },
-            type_conversions={
-                'age': {
-                    'target_type': 'int',
-                    'rounding': 'round',
-                },
-                'income': {
-                    'target_type': 'float',
-                }
-            },
-            encode_columns=['category']
-        )
- 5. *Inspect the cleaned DataFrame*
-        print(cleaned_df.head())
-        print(cleaned_df.dtypes)
+
+1. **Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Import the pipeline**
+
+   ```python
+   from cleaning_toolkit.pipeline import clean_dataframe
+   ```
+
+3. **Load your dataset into a pandas DataFrame**
+
+   ```python
+   df = pd.read_csv('your_dataset.csv')
+   ```
+
+4. **Apply the cleaning pipeline**
+
+   ```python
+   cleaned_df = clean_dataframe(
+       df,
+       missing_strategies={
+           'age': 'mean',
+           'income': 'median',
+       },
+       type_conversions={
+           'age': {
+               'target_type': 'int',
+               'rounding': 'round',
+           },
+           'income': {
+               'target_type': 'float',
+           },
+       },
+       encode_columns=['category']
+   )
+   ```  
+ 5. **Inspect the cleaned DataFrame**
+    ```python
+    print(cleaned_df.head())  
+    print(cleaned_df.dtypes)
+    ```
 
 **Notes:**
  - Column names are automatically standardized (lowercase, no spaces)
