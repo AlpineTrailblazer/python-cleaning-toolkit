@@ -1,6 +1,62 @@
+# Python
 __pycache__/
-.ipynb_checkpoints/
-.env
-.venv/
-.DS_Store
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables / secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+*credentials*.json
+*secret*.json
+*token*.json
+
+# macOS
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Local data
+data/raw/
+data/interim/
+data/processed/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.sqlite
+*.db
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+
+# Logs / generated outputs
+logs/
+outputs/
+*.log
